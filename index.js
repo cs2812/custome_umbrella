@@ -5,6 +5,7 @@ let umbrella_image = document.getElementById("umbrella-image");
 let loader_container = document.getElementById("loader-container");
 let logo_upload_button = document.getElementById("logo-upload-button");
 let logo_upload_input = document.getElementById("logo-upload-input");
+let logo_text = document.getElementById("logText")
 let upload_logo = document.getElementById("upload-logo");
 let umbrella_uploaded_logo = document.getElementById("umbrella-uploaded-logo");
 let upload_loader = document.getElementById("uploade-loader");
@@ -36,10 +37,12 @@ function hideLoader() {
 function handleLogoUpload(event) {
   umbrella_uploaded_logo.style.display = "none";
   const file = event.target.files[0];
+  // console.log(file)
   if (file.size > 5242880) {
     alert("File Size should not be greter than 5MB");
     return;
   }
+  logo_text.innerText = file.name
   const reader = new FileReader();
   reader.readAsDataURL(file);
   reader.onloadend = () => {
@@ -49,6 +52,7 @@ function handleLogoUpload(event) {
     setTimeout(() => {
       hideLoader();
       umbrella_uploaded_logo.src = reader.result;
+      logo_text.innerText = "Upload Logo"
     }, 3000);
   };
 }
