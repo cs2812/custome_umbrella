@@ -22,15 +22,6 @@ body {
   position: relative;
   left: 30%;
 }
-
-
-
-svg {
-  fill: black;
-}
-
-/* themes Style  */
-
 .themes-container {
   /* border: 1px solid; */
   width: 35%;
@@ -82,7 +73,7 @@ svg {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
-#uploade-loader{
+#uploade-loader {
   display: none;
   animation-name: spin;
   animation-duration: 2000ms;
@@ -125,7 +116,7 @@ svg {
 
 .logo-container {
   position: absolute;
-  top: 370px;
+  top: 390px;
   left: 415px;
   z-index: 1;
   width: 4%;

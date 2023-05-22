@@ -10,7 +10,7 @@ let umbrella_uploaded_logo = document.getElementById("umbrella-uploaded-logo");
 let upload_loader = document.getElementById("uploade-loader");
 let isLogoAdded = false;
 let currentColor = "#2db3e5";
-let currentImage = "./assets/Blue.png"
+let currentImage = "./assets/Blue.png";
 upload_logo.style.fill = "white";
 
 function showLoader(color) {
@@ -24,11 +24,10 @@ function showLoader(color) {
   loader_container.style.opacity = 1;
 }
 
-function hideLoader(image) {
+function hideLoader() {
   upload_logo.style.display = "block";
   upload_loader.style.display = "none";
   loader_container.style.opacity = 0;
-  umbrella_image.src = image?image:currentImage;
   umbrella_image.style.display = "block";
   umbrella_uploaded_logo.style.display = "block";
 }
@@ -66,7 +65,8 @@ blue_btn.addEventListener("click", () => {
   } else {
     showLoader("#2db3e5");
     setTimeout(() => {
-      hideLoader("./assets/Blue.png");
+      hideLoader();
+      umbrella_image.src = "./assets/Blue.png";
     }, 3000);
   }
 });
@@ -82,7 +82,8 @@ yellow_btn.addEventListener("click", () => {
   } else {
     showLoader("#fed144");
     setTimeout(() => {
-      hideLoader("./assets/Yello.png");
+      hideLoader();
+      umbrella_image.src = "./assets/Yello.png";
     }, 3000);
   }
 });
@@ -98,7 +99,8 @@ pink_btn.addEventListener("click", () => {
   } else {
     showLoader("#da358c");
     setTimeout(() => {
-      hideLoader("./assets/Pink.png");
+      hideLoader();
+      umbrella_image.src = "./assets/Pink.png";
     }, 3000);
   }
 });
