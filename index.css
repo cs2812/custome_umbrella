@@ -23,20 +23,10 @@ body {
   left: 30%;
 }
 
-#loader-container {
-  position: absolute;
-  top: 43%;
-  left: 32%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  z-index: 999;
-}
+
 
 svg {
-  fill: red;
+  fill: black;
 }
 
 /* themes Style  */
@@ -71,21 +61,34 @@ svg {
   font-size: 20px;
 }
 
-/* #logo-upload-button>svg{
-  width: 20px;
-  fill: white;
-} */
 #logo-upload-button {
   display: flex;
   gap: 50px;
-  background-color: #2db3e5;
 }
 
-.loader-container svg {
+.loader-container {
+  position: absolute;
+  top: 43%;
+  left: 32%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 999;
+
   animation-name: spin;
   animation-duration: 2000ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+}
+#uploade-loader{
+  display: none;
+  animation-name: spin;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition: all 0.3s ease-in-out;
 }
 
 @keyframes spin {
@@ -101,18 +104,14 @@ svg {
   display: flex;
   align-items: left;
   justify-content: left;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: #2db3e5;
+  border: none;
   border-radius: 5px;
   padding: 10px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-}
-
-#logo-upload-button {
-  background-color: #2db3e5;
 }
 
 #logo-upload-button svg {
@@ -126,14 +125,19 @@ svg {
 
 .logo-container {
   position: absolute;
-  top: 330px;
-  left: 190px;
+  top: 370px;
+  left: 415px;
   z-index: 1;
-  width: 30%;
+  width: 4%;
+  height: 20px;
 }
 #logo-upload-button {
   width: 270px;
   height: 50px;
   align-items: center;
   text-align: center;
+}
+#umbrella-uploaded-logo {
+  width: 100%;
+  display: none;
 }
